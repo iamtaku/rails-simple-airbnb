@@ -1,0 +1,12 @@
+<div class="container">
+  <% @flats.each do |flat| %>
+    <div class="card-product">
+      <img src="https://picsum.photos/150" />
+      <div class="card-product-infos">
+        <h2><%= link_to flat.name, flat_path(flat) %></h2>
+        <p><i class="fas fa-user-friends"></i> <%= flat.number_of_guests %></p>
+        <p><i class="fas fa-money-bill"></i> <%= flat.price_per_night %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
